@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import { Img_6 } from "../assets";
 
 const Hero = () => {
   return (
     <>
       <MainSection>
-        <div>{/* <img src="/public/images/IMG_6.jpg" alt="" /> */}</div>
+        <div></div>
       </MainSection>
     </>
   );
@@ -14,13 +15,13 @@ export default Hero;
 
 const MainSection = styled.section`
   height: 80vh;
+  width: 100%;
   /* background-color: #777; */
-  background: url("/public/images/IMG_6.jpg");
+  background: url(${Img_6});
   background-repeat: no-repeat;
   background-position: center;
-  /* background-attachment: fixed; */
   background-size: cover;
-  opacity: 0.5;
+  /* opacity: 0.5; */
   background-color: black;
 
   div {

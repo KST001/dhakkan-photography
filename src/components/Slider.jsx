@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { IMG_1, IMG_2, IMG_3 } from "../assets";
 
 const Slider = () => {
   const ImageList = () =>
@@ -21,19 +22,19 @@ export default Slider;
 const ImageData = [
   {
     id: 1,
-    src: "/public/images/card/IMG_1580.jpg",
+    src: IMG_1,
     title: "Travel",
     date: "1.2.2020",
   },
   {
     id: 2,
-    src: "/public/images/card/IMG_20220709.jpg",
+    src: IMG_2,
     title: "Travel",
     date: "1.2.2020",
   },
   {
     id: 3,
-    src: "/public/images/card/IMG_5269.jpg",
+    src: IMG_3,
     title: "Travel",
     date: "1.2.2020",
   },

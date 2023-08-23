@@ -1,5 +1,15 @@
 import Masonry from "react-responsive-masonry";
 import styled from "styled-components";
+import {
+  Img_1,
+  Img_2,
+  Img_3,
+  Img_4,
+  Img_5,
+  Img_6,
+  Img_7,
+  Img_8,
+} from "../assets";
 const Gallery = () => {
   const ImageGrid = () =>
     imagesData?.map((image, index) => (
@@ -30,35 +40,35 @@ const Grid = styled.div`
 
 const imagesData = [
   {
-    img: "public/images/IMG_1.jpg",
+    img: Img_1,
     title: "Fern",
   },
   {
-    img: "public/images/IMG_2.jpg",
+    img: Img_2,
     title: "Snacks",
   },
   {
-    img: "public/images/IMG_3.jpg",
+    img: Img_3,
     title: "Mushrooms",
   },
   {
-    img: "public/images/IMG_1.jpg",
+    img: Img_4,
     title: "Tower",
   },
   {
-    img: "public/images/IMG_5.jpg",
+    img: Img_5,
     title: "Sea star",
   },
   {
-    img: "public/images/IMG_6.jpg",
+    img: Img_6,
     title: "Mushrooms",
   },
   {
-    img: "public/images/IMG_7.jpg",
+    img: Img_7,
     title: "Tower",
   },
   {
-    img: "public/images/IMG_8.jpg",
+    img: Img_8,
     title: "Sea star",
   },
 ];

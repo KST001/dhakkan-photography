@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { BsArrowUpRightCircle } from "react-icons/bs";
+import { Img_2 } from "../assets";
 
 const About = () => {
   const Navigate = useNavigate();
@@ -8,7 +9,7 @@ const About = () => {
     <AboutUs>
       <div className="container">
         <div className="Image-box">
-          <img src="/public/images/IMG_2.jpg" alt="" />
+          <img src={Img_2} alt="" />
         </div>
         <div className="about-us-text">
           <h2>About Us</h2>
