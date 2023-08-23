@@ -1,14 +1,17 @@
-import Header from "./Header";
-import Main from "./Main";
-import Footer from "./Footer";
-
+import Slider from "./Slider";
+import About from "./About";
+import Gallery from "./Gallery";
+import Newsletter from "./Newsletter";
+import Hero from "./Hero";
 const Home = () => {
   return (
-    <div>
-      <Header />
-      <Main />
-      <Footer />
-    </div>
+    <>
+      <Hero />
+      <Slider />
+      <About />
+      <Gallery />
+      <Newsletter />
+    </>
   );
 };
 

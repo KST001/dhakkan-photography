@@ -20,6 +20,7 @@ export default Gallery;
 const Grid = styled.div`
   max-width: 1300px;
   margin: 1rem auto;
+  width: 90vw;
 
   img {
     object-fit: contain;

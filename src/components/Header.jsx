@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import gsap from "gsap";
-import { useEffect, useRef } from "react";
-import { NavLink } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const logoSubRef = useRef(null);
+  const [menuOpen, setMenuOpen] = useState(false); // Step 1
   useEffect(() => {
     const logoSub = logoSubRef.current;
 
@@ -22,23 +23,34 @@ const Header = () => {
       }
     );
   }, []);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
   return (
     <>
       <Navbar>
         <nav>
           <div className="logo">
-            <svg
-              className="svg-logo"
-              viewBox="0 0 512 530"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M334.522 496.312L334.533 496.307L334.543 496.302C378.238 475.283 411.924 445.176 435.432 405.984C459.46 366.777 471.38 320.665 471.38 267.842C471.38 215.021 459.462 168.68 435.453 128.998C411.961 88.8325 378.283 58.2192 334.574 37.1869C291.394 15.6722 241.096 5 183.823 5H10H5V10V522V527H10H183.823C241.078 527 291.356 516.826 334.522 496.312ZM323.522 401.29C291.558 432.514 245.256 448.488 183.823 448.488H102.294V83.5122H183.823C245.217 83.5122 291.499 99.9546 323.469 132.131C355.491 164.361 371.789 209.372 371.789 267.842C371.789 325.815 355.497 370.054 323.522 401.29Z" />
-            </svg>
+            <Link to="/">
+              <svg
+                className="svg-logo"
+                viewBox="0 0 512 530"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M334.522 496.312L334.533 496.307L334.543 496.302C378.238 475.283 411.924 445.176 435.432 405.984C459.46 366.777 471.38 320.665 471.38 267.842C471.38 215.021 459.462 168.68 435.453 128.998C411.961 88.8325 378.283 58.2192 334.574 37.1869C291.394 15.6722 241.096 5 183.823 5H10H5V10V522V527H10H183.823C241.078 527 291.356 516.826 334.522 496.312ZM323.522 401.29C291.558 432.514 245.256 448.488 183.823 448.488H102.294V83.5122H183.823C245.217 83.5122 291.499 99.9546 323.469 132.131C355.491 164.361 371.789 209.372 371.789 267.842C371.789 325.815 355.497 370.054 323.522 401.29Z" />
+              </svg>
+            </Link>
             <span className="logoSub" ref={logoSubRef}>
               Photography
             </span>
           </div>
-          <ul>
+          <div className="hamburger" onClick={toggleMenu}>
+            <div className={`bar ${menuOpen ? "active" : ""}`} />
+            <div className={`bar ${menuOpen ? "active" : ""}`} />
+            <div className={`bar ${menuOpen ? "active" : ""}`} />
+          </div>
+          <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
             <li className="nav-item">
               <NavLink to="/">Home</NavLink>
             </li>
@@ -61,12 +73,13 @@ const Header = () => {
 export default Header;
 
 const Navbar = styled.section`
-  background-color: black;
+  background-color: #171717;
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
+    background-color: #171717;
+
     height: 70px;
     max-width: 1300px;
     width: 90vw;

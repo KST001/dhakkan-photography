@@ -85,7 +85,7 @@ const Starting = styled.div`
     overflow: hidden;
     .logo-name {
       color: #fff;
-      font-size: 20px;
+      font-size: 2rem;
       letter-spacing: 12px;
       text-transform: uppercase;
       font-weight: bolder;
